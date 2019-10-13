@@ -3,12 +3,11 @@ package com.example.demohello
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
-    val mHeight: Double = 0
-    val mWeight: Double = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,14 +16,20 @@ class MainActivity : AppCompatActivity() {
     }
 
    private fun initView() {
-       mHeight = findViewById<EditText>(R.id.height)
-       mWeight = findViewById<EditText>(R.id.weight)
 
+       Submit.setOnClickListener {
+           var mHeight = input_height.text.toString().toDouble()
+           var mWeight = input_weight.text.toString().toDouble()
+
+           mHeight = mHeight / 100
+
+           var result = mWeight/(mHeight*mHeight)
+
+           bmi_result.text = result.toString()
+       }
 
    }
 
 
-    }
-
-
 }
+

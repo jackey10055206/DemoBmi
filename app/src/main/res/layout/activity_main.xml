@@ -34,7 +34,7 @@
         android:text="Please enter your height!" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/input_height"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -47,20 +47,20 @@
         android:text="Please enter your weight"/>
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/input_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"/>
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calculate"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/bmi_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"/>
